@@ -1,0 +1,44 @@
+/* styles/CountryList.module.css */
+.pageTitle {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 1rem;
+}
+
+.nav {
+  margin: 1em 0;
+  text-align: center;
+}
+
+.favoritesLink {
+  text-align: center;
+  text-decoration: none;
+  color: #0070f3;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.favoritesLink:hover {
+  text-decoration: underline;
+}
+.backlink {
+  text-decoration: none;
+  text-align: center;
+  display: block;
+}
+
+.backButton {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+}

@@ -1,0 +1,48 @@
+/* styles/CountryCard.module.css */
+
+.countryCard {
+  border: 1px solid #ececec;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 16px;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.countryCard:hover {
+  transform: scale(1.05);
+}
+
+.countryCard img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+.countryCard h3 {
+  margin: 8px 0;
+  font-size: 1.2em;
+}
+
+.countryCard p {
+  margin: 4px 0;
+  margin-bottom: 1em;
+  color: #555;
+}
+
+.countryCard .btn {
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-decoration: unset;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.countryCard .btn:hover {
+  background-color: #005bb5;
+}

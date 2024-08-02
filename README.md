@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ANNA App
 
-## Getting Started
+L'application ANNA (l'Amicale Nationale des Nations Amies) est une interface web permettant de rechercher et d'afficher des informations sur les différentes nations du monde.
 
-First, run the development server:
+## Fonctionnalités
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Affichage de la liste des pays avec des informations de base (nom français, région, drapeau).
+- Affichage des détails d'un pays après avoir cliqué sur une vignette.
+- Possibilité d'ajouter des pays aux favoris.
+- Affichage de la liste des pays favoris avec le nombre total de pays aimés.
+- Utilisation de pictogrammes pour mettre en avant certaines informations (capitale, habitants, timezone).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Utilisées
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [Next.js](https://nextjs.org/) - Framework React pour le rendu côté serveur et les fonctionnalités full-stack.
+- [axios](https://github.com/axios/axios) - Pour effectuer des requêtes HTTP vers l'API `restcountries`.
+- [vitest](https://vitest.dev/) - Framework de test.
+- [@testing-library/react](https://testing-library.com/docs/react-testing-library/intro/) - Pour les tests de composants React.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Installation et Exécution
 
-## Learn More
+1. Cloner le dépôt :
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   git clone <URL_DU_DÉPÔT>
+   cd anna-app
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Installer les dépendances :
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```bash
+   npm install
+   ```
 
-## Deploy on Vercel
+3. Démarrer l'application :
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   npm run dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+4. Exécuter les tests :
+   ```bash
+   npm run test
+   ```
+
+## Structure du Projet
+
+- `components/` : Composants réutilisables (CountryCard, CountryDetails, FavoriteCountries).
+- `countries/` : Pages Next.js (index.js, [cca3]/[cca3].js, favorites/[code].js).
+- `public/` : Fichiers statiques (pictogrammes).
+- `styles/` : Fichiers CSS ou SASS.
+- `__tests__/` : Tests unitaires et de composants.
+
+## Développement
+
+### Composants
+
+- **CountryCard** : Affiche le nom français, la région et le drapeau du pays. Inclut un bouton pour voir les détails.
+- **CountryDetails** : Affiche les informations détaillées d'un pays (nom, capitale, timezone, langues, population, région). Inclut un bouton pour ajouter le pays aux favoris.
+- **SearchBar** : Bar de recherche pour les pays en fonction de leur nom.
+
+### Pages
+
+- **index.js** : Page d'accueil affichant une liste de `CountryCard`.
+- **country/[code].js** : Page de détails d'un pays affichant les informations détaillées avec `CountryDetails`.
+- **favorites** : Page affichant les favories.
+
+### Gestion des Favoris
+
+- Utilisation de `useState` pour gérer les pays favoris.
+- Stockage des favoris dans `localStorage` pour persistance.
+
+## Remarques
+
+- Le projet utilise `axios` pour récupérer les données de l'API `https://restcountries.com/v3.1/all`.
+- Les pictogrammes pour la capitale, les habitants et la timezone sont inclus dans le composant `CountryDetails`.
+- Les tests sont réalisés avec `vitest` et `@testing-library/react` pour assurer la fiabilité de l'application.
+
+## Auteur
+
+- **GUIA Ambre** - _Développeur Principal_
